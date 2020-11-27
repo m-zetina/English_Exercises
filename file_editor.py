@@ -27,6 +27,7 @@ def remove(vocab_dict, defintion=False):
             print('    out > Deleted!\n')
         
         else:
+            
             vocab_dict[key].remove(translation.rstrip().lstrip())
             print(f'    out > Deleted {translation.rstrip().lstrip()} from {key}!\n')
 
