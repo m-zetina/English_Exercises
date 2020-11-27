@@ -28,7 +28,7 @@ def remove(vocab_dict, defintion=False):
         
         else:
             vocab_dict[key].remove(translation.rstrip().lstrip())
-            print(f'    out > Deleted {translation} from {key}!\n')
+            print(f'    out > Deleted {translation.rstrip().lstrip()} from {key}!\n')
 
     else:
         raise NameError(f'{inp} is not in dictionary')
@@ -114,7 +114,7 @@ actions = {
 
 
 def serialize_data(data, filename):
-    with open(filename, 'wb') as f:
+    with open(f'pickles/{filename}', 'wb') as f:
         pickle.dump(data, f)
 
 
@@ -123,22 +123,22 @@ def unserialize_data(filename):
     Returns the stored dictionary of vocabulary given the filename in 
     'filename.pickle' format (filename must be a string).
     """
-    with open(filename, 'rb') as f:
+    with open(f'pickles/{filename}', 'rb') as f:
         stored_vocab = pickle.load(f)
     
     return stored_vocab
 
 
 def init_pickle_file(filename):
-    files = os.listdir('.')
+    files = os.listdir('./pickles')
     if filename not in files:
-        with open(filename, 'wb') as f:
+        with open(f'pickles/{filename}', 'wb') as f:
             pickle.dump({}, f)
 
 
 def get_files():
-    files = os.listdir('.')
-    return [item for item in files if not item.endswith('.py')]
+    files = os.listdir('./pickles')
+    return files
 
 
 if __name__ == "__main__":
