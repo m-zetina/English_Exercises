@@ -34,6 +34,7 @@ def remove(vocab_dict, defintion=False):
     else:
         raise NameError(f'{inp} is not in dictionary')
 
+
 def remove_from(vocab_dict):
     return remove(vocab_dict, True)
 
