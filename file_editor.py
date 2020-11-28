@@ -55,7 +55,7 @@ def find_words_with(vocab_dict):
 def print_dict(vocab_dict):
     if vocab_dict:
         print('    out > ')
-        for vocab, translation in vocab_dict.items():
+        for vocab, translation in sorted(vocab_dict.items()):
             translation = ';'.join(translation) if len(translation) > 1 else translation[0]
             print(f'         {vocab}: {translation}')
     else:

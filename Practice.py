@@ -102,5 +102,5 @@ def universal(test_dict, question_limit, prompt):
 
 
 conjugate(5)
-universal(verb_dict, 5, "Past Tense of")
+universal(verb_dict, 10, "Past Tense of")
 universal(sentence_dict, 10, "Please translate this")
