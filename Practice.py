@@ -57,7 +57,7 @@ def conjugate(question_limit):
         if response == conjugation_dict[question][4]:
             num_correct_answers += 1
         print(f"\nCorrect Answers: I {conjugation_dict[question][0]}, You {conjugation_dict[question][1]}, He/She/It {conjugation_dict[question][2]}, We {conjugation_dict[question][3]}, They {conjugation_dict[question][4]}")
-        print(f"\nTotal Score: {num_correct_answers}/{question_limit}\n")
+        print(f"\nTotal Score: {num_correct_answers}/5\n")
 
 def universal(test_dict, question_limit, prompt): 
     num_correct_answers = 0
