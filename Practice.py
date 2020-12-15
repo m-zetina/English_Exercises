@@ -20,6 +20,7 @@ print("\n\n---------------------------------------------------------------------
 conjugation_dict = unserialize("conjugations.pickle")
 verb_dict = unserialize("verbs.pickle")
 sentence_dict = unserialize("sentences.pickle")
+vocab_dict = unserialize("vocab.pickle")
 
 def conjugate(question_limit):
     question_wordbank = sorted(conjugation_dict)
@@ -100,7 +101,7 @@ def universal(test_dict, question_limit, prompt):
     print(f"\nTotal Score: {num_correct_answers}/{question_limit}\n\n")
 
 
-
+universal(vocab_dict, 20, "Translate")
 conjugate(7)
 universal(verb_dict, 10, "Past Tense of")
 universal(sentence_dict, 10, "Please translate this")
